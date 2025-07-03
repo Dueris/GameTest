@@ -14,7 +14,9 @@ import java.util.function.BooleanSupplier;
 
 @Mixin(MinecraftServer.class)
 public class MinecraftServerMixin {
-	@Shadow @Final public static Logger LOGGER;
+	@Shadow
+	@Final
+	public static Logger LOGGER;
 
 	@Inject(method = "tickChildren", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/ServerFunctionManager;tick()V"))
 	public void gametest$tick(BooleanSupplier booleanSupplier, CallbackInfo ci) {

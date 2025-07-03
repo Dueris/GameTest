@@ -28,15 +28,6 @@ public class GameTest implements ModInitializer {
 		return CONTAINERS.keySet();
 	}
 
-	@Override
-	public void onInitialize() {
-		this.internalMod = register("gametest");
-	}
-
-	public ModInstance getInternalMod() {
-		return internalMod;
-	}
-
 	public static void tick(MinecraftServer server) {
 		for (Iterator<RunningModTests> iterator = RUNNING.iterator(); iterator.hasNext(); ) {
 			RunningModTests runningModTests = iterator.next();
@@ -66,5 +57,14 @@ public class GameTest implements ModInitializer {
 
 	public static void stopRunning(@NotNull RunningModTests runningModTests) {
 		runningModTests.mod().markFinishedTests(runningModTests.getFailedTests(), runningModTests);
+	}
+
+	@Override
+	public void onInitialize() {
+		this.internalMod = register("gametest");
+	}
+
+	public ModInstance getInternalMod() {
+		return internalMod;
 	}
 }

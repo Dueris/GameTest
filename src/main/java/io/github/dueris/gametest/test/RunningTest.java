@@ -7,10 +7,10 @@ import org.jetbrains.annotations.Nullable;
 
 // a test with location data and the player who started it, and if its running, etc
 public class RunningTest {
-	private FailureType failureType = null;
 	private final Test test;
 	private final BlockPos center;
 	private final ServerLevel world;
+	private FailureType failureType = null;
 
 	public RunningTest(Test test, BlockPos center, ServerLevel world) {
 		this.test = test;

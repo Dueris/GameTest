@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "gametest",
+  "version": "${version}",
+  "name": "GameTest",
+  "description": "A new testing system for Minecraft allowing automated and in-game tests",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "io.github.dueris.gametest.GameTest"
+    ]
+  },
+  "mixins": [
+    "gametest.mixins.json"
+  ],
+  "accessWidener": "widener.accesswidener",
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
